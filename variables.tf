@@ -1,17 +1,3 @@
-variable "virginia_cidr" {
-  description = "CIDR Virginia"
-  type        = string
-
-}
-
-#variable "public_subnet" {
-#    description = "CIDR public subnet"
-#    type = string  
-#}
-#variable "private_subnet" {
-#    description = "CIDR private subnet"
-#    type = string  
-#}
 variable "subnets" {
   description = "lista de subnets"
   type        = list(string)
@@ -30,10 +16,6 @@ variable "ec2_specs" {
   description = "parametros de la instancia"
   type = map(string)
 }
-variable "enable_monitoring" {
-  description = "Habilita el despliegue de un server de monitoreo"
-  type = number
-}
 variable "ingress_ports_list" {
   description = "Lista de puertos de ingress"
   type = list(number)
@@ -42,3 +24,13 @@ variable "ingress_ports_list" {
 variable "access_key" {}
 
 variable "secret_key" {}
+
+variable "db_password" {
+  description = "Password for the RDS instance"
+  sensitive   = true
+}
+ variable "virginia_cidr" {
+  description = "CIDR block for the VPC in Virginia"
+  type        = string
+}
+

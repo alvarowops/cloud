@@ -5,12 +5,12 @@ virginia_cidr = "10.10.0.0/16"
 #private_subnet = "10.10.1.0/24"
 subnets = ["10.10.0.0/24", "10.10.1.0/24"]
 tags = {
-  "env"         = "dev"
+  "env"         = "prod"
   "owner"       = "Alvaro"
   "cloud"       = "AWS"
   "IAC"         = "terraform"
   "IAC_VERSION" = "1.5.4" 
-  "project" = "cerberus"
+  "project" = "Darts"
   "region" = "virginia"
 }
 
@@ -20,6 +20,7 @@ ec2_specs = {
   "ami" = "ami-0f9ce67dcf718d332"
   "instance_type" = "t2.micro"
 }
-enable_monitoring = 0
 
 ingress_ports_list = [ 22,80,443 ]
+
+db_password = "Navarro-1311"
